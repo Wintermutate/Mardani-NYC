@@ -93,24 +93,41 @@
 	}); */
 	
 	
-	$(document).scroll(function(){
+	/**
+	* Fixed SubNavigation on Scroll
+	*/
+	
+	/* $(document).scroll(function(){
 		
 		var navClass = $('#subnav');
 		var testTop = $('#subnav').offset().top - $(document).scrollTop();
-		var articleTop = $('#first-article').offset().top - $(document).scrollTop();
+		var articleTop = $('#articles-tab').offset().top - $(document).scrollTop();
+		var videoTop = $('#videos-tab').offset().top - $(document).scrollTop();
 			
 		if (testTop < 70 && !navClass.is('.sticky')){
 			$('#subnav').addClass('sticky'),
-			$('#first-article').addClass('sticky');
+			$('#articles-tab').addClass('sticky');
+			$('#videos-tab').addClass('sticky');
 		}
 		
 		if (articleTop > 170 && navClass.is('.sticky')){
 			$('#subnav').removeClass('sticky'),
-			$('#first-article').removeClass('sticky');
+			$('#articles-tab').removeClass('sticky'),
+			$('#videos-tab').removeClass('sticky');
+		}
+		
+		if (videoTop > 170 && navClass.is('.sticky')){
+			$('#subnav').removeClass('sticky'),
+			$('#articles-tab').removeClass('sticky'),
+			$('#videos-tab').removeClass('sticky');
 		}
 		 
-	});
+	}); */
 	
+	
+	/**
+	* Fixed Search Bar on Scroll
+	*/
 	
 	/* $(window).scroll(function() {
 		
@@ -140,7 +157,11 @@
 	  var $panel = $($link.attr('href'));             // Get active panel
 	
 	  $this.on('click', '.tab-control', function(e) { // When click on a tab
+	  
 		e.preventDefault();                           // Prevent link behavior
+		
+		/* $('body, html').animate({"scrollTop" : 300}, 400); */
+		
 		var $link = $(this),                          // Store the current link
 			id = this.hash;                           // Get href of clicked tab 
 	

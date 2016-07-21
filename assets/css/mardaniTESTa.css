@@ -3688,6 +3688,11 @@
 			padding: 3em 3em 0 3em;
 			border-top: solid 1px #AAAAAA;
 		}
+		
+			.feature #first-article, .feature #first-video {
+				padding: 1em 3em 0 3em;
+				border-top: none;
+			}
 	
 			.feature .articles .actions {
 				margin: 2em 0 2em 0;
@@ -3832,15 +3837,19 @@
 		}
 
 	.feature {
-		background-color: rgba(144, 144, 144, 0.075);
+		background-color: rgba(144, 144, 144, 0.9);
 	}
 
 /* Wrapper */
 
 	.wrapper {
-		padding: 3em 0 3em 0;
+		padding: 3em 0;
 		position: relative;
 	}
+	
+		.wrapper.text-wrapper {
+			padding: 0.5em 0;
+		}
 
 		.wrapper > .inner {
 			margin: 0 auto;
@@ -4392,6 +4401,16 @@
 			background-repeat: no-repeat;
 		}
 		
+		.wrapper.style3.custom-displays {
+			background-color: #101010;
+			color: rgba(255, 255, 255, 0.75);
+			background-attachment: fixed;
+			background-image: url("images/overlay.png"), url("../../images/custom-displays-hero.jpg");
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		
 		.wrapper.style3.custominstalls {
 			background-color: #101010;
 			color: rgba(255, 255, 255, 0.75);
@@ -4754,6 +4773,15 @@
 						color: #555555 !important;
 					}
 
+		
+		@media screen and (max-width: 1680px) {
+		
+			.wrapper.text-wrapper {
+				padding: 1em 0;
+			}
+		
+		}
+		
 		@media screen and (max-width: 1280px) {
 
 			.wrapper {
@@ -4784,7 +4812,7 @@
 		@media screen and (max-width: 980px) {
 
 			.wrapper {
-				padding: 2em 3em 2em 3em;
+				padding: 2em 3em;
 			}
 
 				.wrapper > .inner, .wrapper > .wideinner {
@@ -4848,6 +4876,11 @@
 				padding: 1em 1em 0.1em 1em;
 				max-width: 35em;
 			}
+			
+				.wrapper.special {
+					padding: 5em 1em 4em 1em;
+					max-width: 35em;
+				}
 			
 				.wrapper > .inner.innertop, .wrapper > .inner.innerarticle {
 					margin-top: 2em;
@@ -7146,18 +7179,15 @@
 /* Sub-Navigation */
 
 	#subnav {
-		margin: 1em auto 2em auto;
-		padding-bottom: 20px;
+		margin: 2em auto 3em auto;
+		padding: 14px 0;
 		width: 100%;
 		text-align: center;
 		border-bottom: solid 3px #111111;
 	}
+
 	
-		#subnav h2 {
-			font-size: 1.4em;
-		}
-	
-	#subnav.sticky {
+	/* #subnav.sticky {
 		position: fixed;
 		margin: 0;
 		padding: 20px;
@@ -7177,13 +7207,9 @@
 			font-size: 1em;
 		}
 	
-	#first-article {
-		border-top: none;
-	}
-	
-		#first-article.sticky {
-			margin-top: 6em;
-		}
+		#articles-tab.sticky, #videos-tab.sticky {
+			margin-top: 7em;
+		} */
 				
 /* Contact Email */
 
@@ -7307,8 +7333,7 @@
 	.darkhr {
 		width: 100%;
 		border-bottom: solid 1px;
-		border-bottom-color: rgb(55, 55, 55);
-		border-bottom-color: rgba(55, 55, 55, 0.2);
+		border-bottom-color: #AAAAAA;
 		padding-bottom: 0.5em;
 	}
 	
